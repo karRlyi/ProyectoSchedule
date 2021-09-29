@@ -23,7 +23,6 @@
         {
             await dataContext.Database.EnsureCreatedAsync();
             await this.userHelper.CheckRoleAsync("Admin");
-            await this.userHelper.CheckRoleAsync("CoordinatorSchedule");
             await this.userHelper.CheckRoleAsync("Coordinator");
             await this.userHelper.CheckRoleAsync("Teacher");
             await this.userHelper.CheckRoleAsync("Student");
@@ -32,11 +31,6 @@
             {
                 var user = await CheckUserAsync("Ramos", "Karla", "karla.ramos@gmail.com", "8888888888", "123456", "Admin");
                 await CheckAdminAsync(user);
-            }
-            if (!this.dataContext.CoordinatorSchedules.Any())
-            {
-                var user = await CheckUserAsync("Serrano", "Saul", "saul.serrano@gmail.com", "777777777", "123456", "CoordinatorSchedule");
-                await CheckCoordinatorScheduleAsync(user);
             }
             if (!this.dataContext.Coordinators.Any())
             {
@@ -83,11 +77,7 @@
             this.dataContext.Admins.Add(new Admin { User = user });
             await this.dataContext.SaveChangesAsync();
         }
-        private async Task CheckCoordinatorScheduleAsync(User user)
-        {
-            this.dataContext.CoordinatorSchedules.Add(new CoordinatorSchedule { User = user });
-            await this.dataContext.SaveChangesAsync();
-        }
+        
         private async Task CheckCoordinatorAsync(User user)
         {
             this.dataContext.Coordinators.Add(new Coordinator { User = user });
