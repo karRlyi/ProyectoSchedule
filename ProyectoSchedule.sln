@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{3E6A59A4-71A2-4D4B-A2A7-8D164C97A035}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{8D916EBA-A99B-4522-9EB6-C07646F01CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSchedule.Web", "ProyectoSchedule.Web\ProyectoSchedule.Web.csproj", "{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSchedule.UIForms.Android", "ProyectoSchedule.UIForms\ProyectoSchedule.UIForms.Android\ProyectoSchedule.UIForms.Android.csproj", "{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSchedule.UIForms", "ProyectoSchedule.UIForms\ProyectoSchedule.UIForms\ProyectoSchedule.UIForms.csproj", "{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoSchedule.Common", "ProyectoSchedule.Common\ProyectoSchedule.Common.csproj", "{5FDA3ACA-87CC-4340-A64C-8198503255AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FDA3ACA-87CC-4340-A64C-8198503255AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FDA3ACA-87CC-4340-A64C-8198503255AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FDA3ACA-87CC-4340-A64C-8198503255AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FDA3ACA-87CC-4340-A64C-8198503255AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B7697B0-8C30-4BA8-A572-DD5AB7FCCE43} = {3E6A59A4-71A2-4D4B-A2A7-8D164C97A035}
+		{7AB93D1C-3201-4FA5-A132-123E8BEECE2F} = {8D916EBA-A99B-4522-9EB6-C07646F01CAE}
+		{8A51BDDF-CA6F-4F75-91C9-ACD5B32178D2} = {8D916EBA-A99B-4522-9EB6-C07646F01CAE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7E8AF98-B096-4665-AD5A-D99B0931303E}
+	EndGlobalSection
+EndGlobal
