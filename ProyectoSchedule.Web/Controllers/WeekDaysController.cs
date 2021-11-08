@@ -54,7 +54,7 @@ namespace ProyectoSchedule.Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] WeekDay weekDay)
+        public async Task<IActionResult> Create([Bind("Id,Name")] WeekDay weekDay)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ProyectoSchedule.Web.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] WeekDay weekDay)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] WeekDay weekDay)
         {
             if (id != weekDay.Id)
             {

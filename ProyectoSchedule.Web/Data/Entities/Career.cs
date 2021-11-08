@@ -6,7 +6,7 @@ namespace ProyectoSchedule.Web.Data.Entities
     {
         public int Id { get; set; }
         public User User { get; set; }
-        public Coordinator Coordinator { get; set; }
+        public ICollection<Coordinator> Coordinators { get; set; }
         public ICollection<Course> Courses { get; set; }
         public ICollection<Subject> Subjects { get; set; }
         public ICollection<Student> Students { get; set; }

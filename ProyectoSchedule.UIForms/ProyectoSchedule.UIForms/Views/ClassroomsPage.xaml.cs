@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace ProyectoSchedule.UIForms
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace ProyectoSchedule.UIForms.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ClassroomsPage : ContentPage
     {
-        public MainPage()
+        public ClassroomsPage()
         {
             InitializeComponent();
         }

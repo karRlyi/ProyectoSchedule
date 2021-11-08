@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoSchedule.UIForms.ViewModels;
+using ProyectoSchedule.UIForms.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +11,8 @@ namespace ProyectoSchedule.UIForms
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainViewModel.GetInstance().Login = new LoginViewModel();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
