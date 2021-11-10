@@ -5,6 +5,8 @@
         private static MainViewModel instance;
         public LoginViewModel Login { get; set; }
         public ClassroomsViewModel Classrooms { get; set; }
+
+        public WeekdaysViewModel Weekdays { get; set; }
         public MainViewModel()
         {
             instance = this;

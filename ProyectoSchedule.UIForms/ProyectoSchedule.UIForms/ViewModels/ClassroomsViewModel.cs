@@ -14,6 +14,8 @@
         public ObservableCollection<Classroom> Classrooms {
             get { return this.classrooms; }
             set { this.SetValue(ref this.classrooms, value); } }
+
+
         public ClassroomsViewModel()
         {
             this.apiService = new ApiService();

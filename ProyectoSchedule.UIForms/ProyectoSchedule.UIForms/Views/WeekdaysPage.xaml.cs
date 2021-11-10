@@ -3,9 +3,9 @@ using Xamarin.Forms.Xaml;
 namespace ProyectoSchedule.UIForms.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ClassroomsPage : ContentPage
+    public partial class WeekdaysPage : ContentPage
     {
-        public ClassroomsPage()
+        public WeekdaysPage()
         {
             InitializeComponent();
         }

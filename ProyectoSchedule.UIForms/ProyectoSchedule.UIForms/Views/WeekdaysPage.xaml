@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProyectoSchedule.UIForms.Views.ClassroomsPage"
+             x:Class="ProyectoSchedule.UIForms.Views.WeekdaysPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Classrooms">    
+             Title="Weekdays">
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Classrooms}"
-                     Padding="10">
-            <ListView ItemsSource="{Binding Classrooms}"
+        <StackLayout BindingContext ="{Binding Weekdays}"
+                     Padding ="10">
+            <ListView ItemsSource="{Binding Weekdays}"
                       HasUnevenRows="True">
-                
+
             </ListView>
         </StackLayout>
     </ContentPage.Content>
