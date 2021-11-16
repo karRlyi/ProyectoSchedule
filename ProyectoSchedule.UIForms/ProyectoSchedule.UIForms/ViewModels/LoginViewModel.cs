@@ -46,8 +46,8 @@
             }
             //await Application.Current.MainPage.DisplayAlert("OK", "Listo", "Aceptar");
             //return;
-            MainViewModel.GetInstance().Classrooms = new ClassroomsViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new ClassroomsPage());
+            //MainViewModel.GetInstance().Classrooms = new ClassroomsViewModel();
+            //await Application.Current.MainPage.Navigation.PushAsync(new ClassroomsPage());
 
             MainViewModel.GetInstance().Weekdays = new WeekdaysViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new WeekdaysPage());
