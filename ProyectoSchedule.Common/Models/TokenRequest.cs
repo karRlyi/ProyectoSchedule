@@ -3,6 +3,6 @@
     public class TokenRequest
     {
         public string Username { get; set; }
-        public int MyProperty { get; set; }
+        public string Password { get; set; }
     }
 }

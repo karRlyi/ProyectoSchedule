@@ -1,10 +1,13 @@
 ﻿namespace ProyectoSchedule.UIForms.ViewModels
 {
+    using GalaSoft.MvvmLight.Command;
     using ProyectoSchedule.Common.Models;
     using ProyectoSchedule.Common.Services;
+    using ProyectoSchedule.UIForms.Views;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Windows.Input;
     using Xamarin.Forms;
 
     public class ClassroomsViewModel : BaseViewModel
@@ -15,6 +18,22 @@
             get { return this.classrooms; }
             set { this.SetValue(ref this.classrooms, value); } }
 
+        private bool isRefreshing;
+
+        public bool IsRefreshing {
+            get { return this.isRefreshing; } 
+            set { this.SetValue(ref this.isRefreshing, value); } }
+
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new RelayCommand(this.LoadClassrooms);
+            }
+        }
+
+        
 
         public ClassroomsViewModel()
         {
@@ -24,8 +43,15 @@
 
         private async void LoadClassrooms()
         {
-            var response = await this.apiService.GetListAsync<Classroom>("https://proyectoscheduleweb20211013123107.azurewebsites.net", "/api","/Classrooms");
-            if(!response.IsSuccess)
+            this.IsRefreshing = true;
+            var url = Application.Current.Resources["UrlAPI"].ToString();
+            var response = await this.apiService.GetListAsync<Classroom>(url,
+                 "/api",
+                 "/Classrooms");
+            //"bearer",
+            //MainViewModel.GetInstance().Token.Token);
+            this.IsRefreshing = false;
+            if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert("Error",response.Message,
                     "Aceptar");

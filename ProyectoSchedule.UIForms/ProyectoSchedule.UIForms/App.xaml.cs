@@ -8,6 +8,8 @@ namespace ProyectoSchedule.UIForms
 {
     public partial class App : Application
     {
+        public static MasterPage Master { get; internal set; }
+        public static NavigationPage Navigator { get; internal set ; }
         public App()
         {
             InitializeComponent();

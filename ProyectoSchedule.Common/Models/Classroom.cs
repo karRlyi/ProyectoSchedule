@@ -11,5 +11,12 @@
 
         [JsonProperty("schedules")]
         public object Schedules { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id} {Name}";
+        }
     }
+
+    
 }

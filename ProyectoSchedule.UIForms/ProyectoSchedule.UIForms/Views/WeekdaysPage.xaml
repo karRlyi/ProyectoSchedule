@@ -4,12 +4,57 @@
              x:Class="ProyectoSchedule.UIForms.Views.WeekdaysPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Weekdays">
-    <ContentPage.Content>
-        <StackLayout BindingContext ="{Binding Weekdays}"
-                     Padding ="10">
-            <ListView ItemsSource="{Binding Weekdays}"
-                      HasUnevenRows="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="About" Command="{Binding KarlaCommand}"/>
 
+        <ToolbarItem IconImageSource="ic_add" Command="{Binding AddCommand}"/>
+
+
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Weekdays}"
+                     Padding="10">
+            <ListView ItemsSource="{Binding Weekdays}"
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsRefreshing}"
+                      RefreshCommand="{Binding RefreshCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto">
+
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*">
+
+                                    </ColumnDefinition>
+
+
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Id}"
+                                           TextColor="Red"
+                                           FontAttributes="Bold"
+                                           FontSize="Large">
+
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           TextColor="Blue"
+                                           FontSize="Title">
+
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

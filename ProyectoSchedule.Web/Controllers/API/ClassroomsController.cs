@@ -6,7 +6,7 @@
     using ProyectoSchedule.Web.Data.Repositories;
 
     [Route("API/[Controller]")]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ClassroomsController:Controller
     {
         private readonly IClassroomRepository classroomRepository;

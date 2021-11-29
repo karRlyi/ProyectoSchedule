@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoSchedule.UIForms.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Login">
+             Title="Login" BackgroundColor="White">
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Login}"
             Padding="10">
             <StackLayout>
+                <Image Source="Schedule"
+                       HeightRequest="100">
+                    
+                </Image>
                 <Label Text="Email"></Label>
                 <Entry Keyboard="Email"
                       Placeholder="Introduce tu email"
@@ -16,12 +20,16 @@
                 <Label Text="Password"></Label>
                 <Entry IsPassword="True"
                       Placeholder="Introduce tu contraseña"
+                       
                        Text="{Binding Password}"></Entry>
                 <Button 
                     Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     Text="Login"
                     ></Button>
-                
+                <ActivityIndicator IsRunning="{Binding IsRunning}">
+                    
+                </ActivityIndicator>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

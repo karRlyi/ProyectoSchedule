@@ -6,6 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <infra:InstanceLocator x:Key="Locator"/>
+            <x:String x:Key="UrlAPI">https://proyectoscheduleweb20211013123107.azurewebsites.net</x:String>
         </ResourceDictionary>
 
     </Application.Resources>
