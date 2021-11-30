@@ -59,6 +59,8 @@
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(tokenType, accessToken);
 
+
+
                 var url = $"{servicePrefix}{controller}";
                 var response = await client.GetAsync(url);
                 var result = await response.Content.ReadAsStringAsync();
@@ -88,6 +90,7 @@
                 };
             }
         }
+
         public async Task<Response> GetTokenAsync(
         string urlBase,
         string servicePrefix,
@@ -97,14 +100,13 @@
             try
             {
                 var requestString = JsonConvert.SerializeObject(request);
-                var content = new StringContent(requestString, Encoding.UTF8,
-                "application/json");
+                var content = new StringContent(requestString, Encoding.UTF8, "application/json");
                 var client = new HttpClient
                 {
                     BaseAddress = new Uri(urlBase)
                 };
 
-                var url = $"{ servicePrefix}{ controller}";
+                var url = $"{servicePrefix}{controller}";
                 var response = await client.PostAsync(url, content);
                 var result = await response.Content.ReadAsStringAsync();
 
@@ -116,8 +118,6 @@
                         Message = result,
                     };
                 }
-
-
                 var token = JsonConvert.DeserializeObject<TokenResponse>(result);
                 return new Response
                 {
@@ -136,8 +136,6 @@
         }
     }
 }
-
-
 
 
 

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoSchedule.UIForms.Views.Aboutpage"
-             Title="Setup" BackgroundColor="White">
+             Title="About" BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="App Develomentp by: "

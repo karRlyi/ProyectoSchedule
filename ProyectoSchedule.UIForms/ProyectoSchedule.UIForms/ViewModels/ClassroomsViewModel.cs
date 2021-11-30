@@ -45,16 +45,16 @@
         {
             this.IsRefreshing = true;
             var url = Application.Current.Resources["UrlAPI"].ToString();
-            var response = await this.apiService.GetListAsync<Classroom>(url,
-                 "/api",
-                 "/Classrooms");
-            //"bearer",
-            //MainViewModel.GetInstance().Token.Token);
+            var response = await this.apiService.GetListAsync<Classroom>(
+                url,
+                "/api",
+                "/Classrooms",
+                "bearer",
+                MainViewModel.GetInstance().Token.Token);
             this.IsRefreshing = false;
             if (!response.IsSuccess)
             {
-                await Application.Current.MainPage.DisplayAlert("Error",response.Message,
-                    "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Error", response.Message, "Aceptar");
                 return;
             }
             var myClassrooms = (List<Classroom>)response.Result;
